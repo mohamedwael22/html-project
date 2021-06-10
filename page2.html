@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>second page</title>
+</head>
+<body>
+    <table style="width: 100%;">
+        <tr>
+            <td><a href="index.html"> Home </a></td>
+            <td><a href="page1.html"> page-1 </a></td>
+            <td><a href="page2.html"> page-2 </a></td>
+            <td><a href="page3.html"> page-3 </a></td>
+            <td><a href="page4.html"> page-4 </a></td>
+        </tr>
+    </table>
+    <br>
+    <center><img src="main_image.JPG" alt="main_image" width="75%"></center>
+    <hr>
+    <h1><u>Navigational database</u></h1>
+    <big>
+        <p>
+            <b>A navigational database</b> is a type of database in which records or objects are found primarily by following references from other objects. The term was popularized by the title of Charles Bachman's 1973 Turing Award paper, The Programmer as Navigator.[1] This paper emphasized the fact that the new disk-based database systems allowed the programmer to choose arbitrary navigational routes following relationships from record to record, contrasting this with the constraints of earlier magnetic-tape and punched card systems where data access was strictly sequential.
+            <br><br>
+            One of the earliest navigational databases was Integrated Data Store (IDS), which was developed by Bachman for General Electric in the 1960s. IDS became the basis for the CODASYL database model in 1969.
+            <br>
+            Although Bachman described the concept of navigation in abstract terms, the idea of navigational access came to be associated strongly with the procedural design of the CODASYL Data Manipulation Language. Writing in 1982, for example, Tsichritzis and Lochovsky[2] state that "The notion of currency is central to the concept of navigation." By the notion of currency, they refer to the idea that a program maintains (explicitly or implicitly) a current position in any sequence of records that it is processing, and that operations such as GET NEXT and GET PRIOR retrieve records relative to this current position, while also changing the current position to the record that is retrieved.
+            <br><br>
+            Navigational database programming thus came to be seen as intrinsically procedural; and moreover to depend on the maintenance of an implicit set of global variables (currency indicators) holding the current state. As such, the approach was seen as diametrically opposed to the declarative programming style used by the relational model. The declarative nature of relational languages such as SQL offered better programmer productivity and a higher level of data independence (that is, the ability of programs to continue working as the database structure evolves.) Navigational interfaces, as a result, were gradually eclipsed during the 1980s by declarative query languages.
+            <br><br>
+            During the 1990s it started becoming clear that for certain applications handling complex data (for example, spatial databases and engineering databases), the relational calculus had limitations. At that time, a reappraisal of the entire database market began, with several companies describing the new systems using the marketing term NoSQL. Many of these systems introduced data manipulation languages which, while far removed from the CODASYL DML with its currency indicators, could be understood as implementing Bachman's "navigational" vision. Some of these languages are procedural; others (such as XPath) are entirely declarative. Offshoots of the navigational concept, such as the graph database, found new uses in modern transaction processing workloads.
+            <br><br>
+            Navigational access is traditionally associated with the network model and hierarchical model of database, and conventionally describes data manipulation APIs in which records (or objects) are processed one at a time, iteratively. The essential characteristic as described by Bachman, however, is finding records by virtue of their relationship to other records: so an interface can still be navigational if it has set-oriented features.[3] From this viewpoint, the key difference between navigational data manipulation languages and relational languages is the use of explicit named relationships rather than value-based joins: for department with name="Sales", find all employees in set department-employees versus find employees, departments where employee.department-code = department.code and department.name="Sales".
+
+            In practice, however, most navigational APIs have been procedural: the above query would be executed using procedural logic along the lines of the following pseudo-code:
+            <br>
+            <code>
+                get department with name='Sales'
+                get first employee in set department-employees
+                until end-of-set do {
+                get next employee in set department-employees
+                process employee
+                }
+            </code>
+        </p>
+    </big>
+</body>
+</html>
